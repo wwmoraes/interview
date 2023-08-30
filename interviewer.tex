@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, total={18cm, 26cm}]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{xcolor}
+% \usepackage{showframe}
+
+\parindent0pt
+
+% make labels and the field appear on separate lines
+\renewcommand*{\LayoutTextField}[2]{%
+  \par\makebox[\textwidth][l]{\parbox{\textwidth}{#1}}\vskip1.4ex%
+  \par\raisebox{\baselineskip}{\raisebox{-\height}{#2}}%
+  \vskip1.4ex%
+}
+
+% sets defaults
+\def\DefaultOptionsofSubmit{print,name=Submit,noexport,bordercolor=black}
+\def\DefaultOptionsofReset{print,name=Reset,noexport,bordercolor=black}
+\def\DefaultOptionsofPushButton{print,bordercolor=black}
+\def\DefaultOptionsofCheckBox{print,bordercolor=black}
+\def\DefaultOptionsofText{print,width=0.99\textwidth,richtext,bordercolor=black}
+\def\DefaultOptionsofListBox{print,bordercolor=black}
+\def\DefaultOptionsofComboBox{print,edit,sort,bordercolor=black}
+\def\DefaultOptionsofPopdownBox{print,bordercolor=black}
+\def\DefaultOptionsofRadio{print,notoggletooff,bordercolor=black}
+
+\begin{document}
+  \title{Job interview - as an interviewer}
+  \author{William Artero}
+  \maketitle
+  \begin{Form}
+    \section{Details}
+    \TextField{Candidate name}
+    \TextField{Position}
+
+    \clearpage
+    \section{Custom questions}
+    \TextField[multiline]{Question 1}
+    \TextField[multiline]{Answer 1}
+    \TextField[multiline]{Question 2}
+    \TextField[multiline]{Answer 2}
+    \TextField[multiline]{Question 3}
+    \TextField[multiline]{Answer 3}
+    \TextField[multiline]{Question 4}
+    \TextField[multiline]{Answer 4}
+  \end{Form}
+\end{document}

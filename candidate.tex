@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, total={18cm, 26cm}]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{xcolor}
+% \usepackage{showframe}
+
+\parindent0pt
+
+% make labels and the field appear on separate lines
+\renewcommand*{\LayoutTextField}[2]{%
+  \par\makebox[\textwidth][l]{\parbox{\textwidth}{#1}}\vskip1.4ex%
+  \par\raisebox{\baselineskip}{\raisebox{-\height}{#2}}%
+  \vskip1.4ex%
+}
+
+% sets defaults
+\def\DefaultOptionsofSubmit{print,name=Submit,noexport,bordercolor=black}
+\def\DefaultOptionsofReset{print,name=Reset,noexport,bordercolor=black}
+\def\DefaultOptionsofPushButton{print,bordercolor=black}
+\def\DefaultOptionsofCheckBox{print,bordercolor=black}
+\def\DefaultOptionsofText{print,width=0.99\textwidth,richtext,bordercolor=black}
+\def\DefaultOptionsofListBox{print,bordercolor=black}
+\def\DefaultOptionsofComboBox{print,edit,sort,bordercolor=black}
+\def\DefaultOptionsofPopdownBox{print,bordercolor=black}
+\def\DefaultOptionsofRadio{print,notoggletooff,bordercolor=black}
+
+\begin{document}
+  \title{Job interview - as a candidate}
+  \author{William Artero}
+  \maketitle
+  \begin{Form}
+    \section{Details}
+    \TextField{Company}
+    \TextField{Position}
+    \TextField{Salary}
+    \TextField{Interviewer(s)}
+
+    \clearpage
+    \section{Job-specific questions}
+    \TextField[multiline]{What will a typical day for me in this role look like?}
+    \TextField[multiline]{What are your expectations for me in this role?}
+    \TextField[multiline]{What's the most important thing I should accomplish in the first 90 days?}
+    \TextField[multiline]{What's the performance review process like? How often will I be formally reviewed?}
+    \TextField[multiline]{What metrics or goals will my performance be evaluated against?}
+    \TextField[multiline]{What are the most immediate projects that I will take on?}
+
+    \clearpage
+    \section{Team questions}
+    \TextField[multiline]{What types of skills is the team missing that you're looking to fill with a new hire?}
+    \TextField[multiline]{What are the biggest challenges that I might face in this position?}
+    \TextField[multiline]{Do you expect my main responsibilities in this position to change in the next six months to a year?}
+    \TextField[multiline]{Can you tell me about the team I'll be working with?}
+    \TextField[multiline]{Who will I work with most closely? What other departments or units will I interact with?}
+    \TextField[multiline]{Can you tell me about my direct reports? What are their strengths and the team's biggest challenges?}
+
+    \clearpage
+    \section{Company questions}
+    \TextField[multiline]{What are the current company goals and how does this team contribute to them?}
+    \TextField[multiline]{What gets you most excited about the company's future?}
+    \TextField[multiline]{How would you describe the company's values?}
+    \TextField[multiline]{How has the company changed over the last few years?}
+    \TextField[multiline]{What are the company's plans for growth and development?}
+
+    \clearpage
+    \section{Culture questions}
+    \TextField[multiline]{How do you typically onboard employees?}
+    \TextField[multiline]{What do new employees typically find surprising after they start?}
+    \TextField[multiline]{Is there anything that I should read before starting that would help me have a shared understanding with my colleagues?}
+
+    \clearpage
+    \section{Career questions}
+    \TextField[multiline]{What learning and development opportunities will I have in this role?}
+    \TextField[multiline]{How does the team I'll be part of continue to grow professionally?}
+    \TextField[multiline]{Are there examples of a career path beginning with this position?}
+    \TextField[multiline]{What are the common career paths in this department?}
+    \TextField[multiline]{How are promotions typically handled?}
+    \TextField[multiline]{Where have successful employees moved on to?}
+
+    \clearpage
+    \section{Custom questions}
+    \TextField[multiline]{Question 1}
+    \TextField[multiline]{Answer 1}
+    \TextField[multiline]{Question 2}
+    \TextField[multiline]{Answer 2}
+    \TextField[multiline]{Question 3}
+    \TextField[multiline]{Answer 3}
+    \TextField[multiline]{Question 4}
+    \TextField[multiline]{Answer 4}
+  \end{Form}
+\end{document}
